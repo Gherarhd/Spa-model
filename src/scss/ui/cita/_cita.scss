@@ -1,0 +1,34 @@
+@use'base/variables' as v;
+@use'base/mixins' as m;
+
+.cita{
+  
+    align-items: center;
+    color: v.$blanco;
+    text-align: center;
+    background-image: linear-gradient(to bottom, transparentize(v.$negro, .7) 0%, transparentize(v.$negro,.9) 100%) , url(../img/bg_citas.jpg);
+    background-attachment:  fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  
+
+
+    &__heading{
+        @include m.heading;
+        font-size: 5rem;
+    }
+    &__texto{
+        margin: 0 auto;
+        max-width: 60rem;
+        line-height: 2;
+        padding: 1rem
+    }
+
+    &__enlace{
+        @include m.boton(v.$primario, v.$blanco);
+        font-size: 2rem;
+        padding: 2rem 10rem;
+}
+
+}

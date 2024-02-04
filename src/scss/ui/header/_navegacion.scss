@@ -1,0 +1,39 @@
+@use'base/variables' as v;
+@use'base/mixins' as m;
+
+
+.navegacion{
+
+    background-color: v.$primario;
+    padding:.5rem;
+    margin: 2rem 0;
+
+
+
+ &__contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    @include m.tablet { 
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+
+     }
+
+ }
+
+
+
+    &__border{
+        border-block:2px dashed v.$blanco ; //*propiedad nueva css
+        padding: 1.5rem;
+
+    }
+
+    &__enlace{
+        color: v.$blanco;
+        font-size: 2.4rem;
+    }
+}
